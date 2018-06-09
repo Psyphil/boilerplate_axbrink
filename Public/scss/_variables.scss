@@ -1,0 +1,46 @@
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+// Variable overrides
+$primary: $green;
+
+// Cheat cheet
+/*
+    Bootstrap
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+    
+$body-bg:                   $white !default;
+$body-color:                $gray-900 !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+
+    Coreui
+$navbar-bg:                           #fff !default;
+$navbar-color:                        $gray-600 !default;
+$navbar-hover-color:                  $gray-800 !default;
+$navbar-active-color:                 $gray-800 !default;
+$navbar-disabled-color:               $gray-300 !default;
+
+$sidebar-bg:                          $gray-800 !default;
+$sidebar-color:                       #fff !default;
+    
+$aside-menu-color:                    $gray-800 !default;
+$aside-menu-bg:                       #fff !default;
+    
+$footer-bg:                           $gray-100 !default;
+$footer-color:                        $body-color !default;
+    */
