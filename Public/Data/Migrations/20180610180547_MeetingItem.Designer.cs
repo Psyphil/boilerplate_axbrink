@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Public.Data;
 
 namespace Public.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180610180547_MeetingItem")]
+    partial class MeetingItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -207,31 +209,6 @@ namespace Public.Data.Migrations
                     b.ToTable("Meetings");
                 });
 
-            modelBuilder.Entity("Public.Models.MeetingItem", b =>
-                {
-                    b.Property<int>("MeetingItemID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CreatedBy");
-
-                    b.Property<DateTime>("CreatedDate");
-
-                    b.Property<int>("MeetingID");
-
-                    b.Property<string>("MeetingItemDescription");
-
-                    b.Property<int>("MeetingItemStatus");
-
-                    b.Property<string>("MeetingItemTitle");
-
-                    b.HasKey("MeetingItemID");
-
-                    b.HasIndex("MeetingID");
-
-                    b.ToTable("MeetingsItems");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
@@ -274,14 +251,6 @@ namespace Public.Data.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Public.Models.MeetingItem", b =>
-                {
-                    b.HasOne("Public.Models.Meeting", "Meeting")
-                        .WithMany("MeetingItems")
-                        .HasForeignKey("MeetingID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

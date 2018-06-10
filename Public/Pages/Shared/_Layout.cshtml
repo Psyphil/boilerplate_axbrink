@@ -11,7 +11,7 @@
     <title>@ViewData["Title"]</title>
 
     <!-- Icons-->
-    <link href="/node_modules/@Html.Raw("@")coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="/node_modules/@@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
     <link href="/node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
     <link href="/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
@@ -25,7 +25,7 @@
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a asp-page="/Index" class="navbar-brand">boilerplate_axbrink</a>
+        <a asp-page="/Index" class="navbar-brand">Conctio</a>
         <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -61,9 +61,13 @@
 
             <div class="container-fluid">
                 <div class="animated fadeIn">
+                    <div class="card">
+                        <div class="card-body">
 
-                    @RenderBody()
+                            @RenderBody()
 
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -384,7 +388,7 @@
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/node_modules/pace-progress/pace.min.js"></script>
     <script src="/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-    <script src="/node_modules/@Html.Raw("@")coreui/coreui/dist/js/coreui.min.js"></script>
+    <script src="/node_modules/@@coreui/coreui/dist/js/coreui.min.js"></script>
     <script src="~/js/site.js"></script>
 
 

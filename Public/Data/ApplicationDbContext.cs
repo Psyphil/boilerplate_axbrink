@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Public.Models;
 
 namespace Public.Data
 {
@@ -12,5 +13,7 @@ namespace Public.Data
             : base(options)
         {
         }
+        public DbSet<Public.Models.Meeting> Meetings { get; set; }
+        public DbSet<Public.Models.MeetingItem> MeetingsItems { get; set; }
     }
 }

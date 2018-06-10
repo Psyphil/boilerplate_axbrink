@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Public.Data;
 
 namespace Public.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180610180906_MeetingItem2")]
+    partial class MeetingItem2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -227,8 +229,6 @@ namespace Public.Data.Migrations
 
                     b.HasKey("MeetingItemID");
 
-                    b.HasIndex("MeetingID");
-
                     b.ToTable("MeetingsItems");
                 });
 
@@ -274,14 +274,6 @@ namespace Public.Data.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Public.Models.MeetingItem", b =>
-                {
-                    b.HasOne("Public.Models.Meeting", "Meeting")
-                        .WithMany("MeetingItems")
-                        .HasForeignKey("MeetingID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
